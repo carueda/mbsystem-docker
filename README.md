@@ -14,6 +14,8 @@
       program is launched so the target file can be operated.
     - Any GUIs?
   
+- Build GMT from source
+
 - Continuous deployment, so the docker image is automatically built and published
   upon a push to the code (subject to successful testing).
   Ref: https://docs.docker.com/docker-hub/builds/
