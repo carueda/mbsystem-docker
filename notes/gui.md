@@ -2,6 +2,11 @@
 
 Some preliminary notes about enabling the MB-System GUI programs.
 
+**General refs**:
+
+- https://github.com/mviereck/x11docker
+- http://wiki.ros.org/docker/Tutorials/GUI
+
 ## MacOS
 
 Reference: https://cntnr.io/running-guis-with-docker-on-mac-os-x-a14df6a76efc
@@ -10,7 +15,7 @@ and this comment:  https://medium.com/@abhayghatpande/hi-nils-de-moor-thank-you-
     $ brew install socat
     $ socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\"
 
-I already have XQuartz (2.7.11 -xorg-server 1.18.4) and with the security
+I already have XQuartz (2.7.11 -xorg-server 1.18.4) on my Mac, and with the security
 settings as indicated in the article.
 (likely I followed some similar reference a while ago)
 
@@ -21,7 +26,7 @@ As initial basic test:
 
     $ docker run --rm -e DISPLAY=${ip}:0 gns3/xeyes
     
-I can also run the following MB-System GUI programs:
+I can also run MB-System GUI programs:
 
     $ echo $MBSYSTEM_IMAGE
     mbari/mbsystem:5.7.6beta23
@@ -37,3 +42,9 @@ I can also run the following MB-System GUI programs:
     $ docker run -it --rm -e DISPLAY=${ip}:0 $MBSYSTEM_IMAGE mbnavadjust
 
 ![](mbnavadjust.png)
+
+## Windows
+
+(untested)
+
+- https://dev.to/darksmile92/run-gui-app-in-linux-docker-container-on-windows-host-4kde
