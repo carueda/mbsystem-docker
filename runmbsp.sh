@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # This script is just part of a preliminary mechanism to
 # launch any of the MB-System programs.
