@@ -13,7 +13,7 @@
       A basic initial mechanism would be that `$(pwd)` on the host be mapped to
       some location in the container (e.g., `/opt/MBSWorkDir`) whenever a 
       program is launched so the target file can be operated.
-  
+        
 - Build GMT from source
 
 - Continuous deployment, so the docker image is automatically built and published
@@ -58,7 +58,7 @@ Command-line program example:
     
     usage: mbabsorption [-Csoundspeed -Ddepth -Ffrequency -Pph -Ssalinity -Ttemperature -V -H]
 
-GUI example (see [`notes/gui`](notes/gui.md):
+GUI example (see [`notes/gui`](notes/gui.md)):
 
     $ docker run -it --rm -e DISPLAY=${ip}:0 $MBSYSTEM_IMAGE mbgrdviz
 
@@ -71,3 +71,12 @@ Finally, something like the following to update this repo:
     git add -u
     git commit -m "Update MB-System pointer and build new image $MBSYSTEM_IMAGE"
     git push origin master
+
+
+**2020-01-13 meeting**
+
+- Ability to access shares like titan
+- Use current host directory mapped as "home" directory
+- List file with "pointers" to locations
+- Windows
+- keep using separate repo for now
