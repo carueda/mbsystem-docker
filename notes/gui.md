@@ -6,6 +6,7 @@ Some preliminary notes about enabling the MB-System GUI programs.
 
 - https://github.com/mviereck/x11docker
 - http://wiki.ros.org/docker/Tutorials/GUI
+- https://nelkinda.com/blog/xeyes-in-docker/
 
 ## MacOS
 
